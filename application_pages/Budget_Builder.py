@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-#st.set_page_config(page_title="Budget Dashboard", page_icon=":money_with_wings:", layout="wide")
+
 st.title("Budget Dashboard")
 
 # Initialize session state variables

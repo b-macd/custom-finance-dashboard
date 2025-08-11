@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import os
 
-#st.set_page_config(page_title="Monthly Expense Report", page_icon=":calendar:", layout="wide")
 st.title("Monthly Expense Report")
 
 # List all CSV files in the data directory
