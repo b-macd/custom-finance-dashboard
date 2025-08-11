@@ -11,9 +11,9 @@ st.write("Use the navigation menu in the sidebar (on mobile, click the '>>' in t
 st.write("Dashboard Features:")
 st.markdown("""
 - **Accounts Overview**: Get a summary of your financial accounts.
-- **Budget Builder**: Create and manage your budget effectively.
 - **Monthly Expense Report**: Analyze your monthly expenses in detail.
 - **Transfer Tracker**: Track transfers between your accounts.
+- **Budget Builder**: Create and manage your budget effectively.
 """)
 
 # upload file feature to store csv data in dataframs for other pages
