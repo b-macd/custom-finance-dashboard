@@ -24,14 +24,21 @@ def login():
         submit_button = st.form_submit_button("Login")
 
         if submit_button:
-            hashed_password = get_md5_hash(password)
-            if hashed_password == st.secrets[f"{username}"]:
-                st.session_state.logged_in = True
-                st.session_state.username = username
-                st.success("Login successful!")
-                st.rerun()
+            if username not in st.secrets or f"{username}" not in st.secrets:
+                st.error("Username not found.")
+            elif not password:
+                st.error("Please enter a password.")
+            elif not username:
+                st.error("Please enter a username.")
             else:
-                st.error("Invalid username or password.")
+                hashed_password = get_md5_hash(password)
+                if hashed_password == st.secrets[f"{username}"]:
+                    st.session_state.logged_in = True
+                    st.session_state.username = username
+                    st.success("Login successful!")
+                    st.rerun()
+                else:
+                    st.error("Invalid username or password.")
                 
 
 landing_page = st.Page(
