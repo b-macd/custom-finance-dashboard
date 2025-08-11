@@ -5,7 +5,8 @@ import pandas as pd
 if "dataframes" not in st.session_state:
     st.session_state.dataframes = {}
 
-st.title("Welcome to the Finance Dashboard")
+st.title("Finance Dashboard")
+st.subheader(f"Welcome, {st.session_state.username}!")
 st.write("Use the navigation menu in the sidebar to explore different sections of the dashboard.")
 st.write("Explore the features of this dashboard:")
 st.markdown("""
