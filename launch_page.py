@@ -71,7 +71,7 @@ home_page = [landing_page]
 application_pages = [app_1, app_2, app_3, app_4]
 
 page_dict ={}
-if st.session_state.username in ["Olivia"]:
+if st.session_state.username in ["Olivia", "Ben"]:
     page_dict["Applications"] = application_pages
 
 if st.session_state.logged_in == True:
