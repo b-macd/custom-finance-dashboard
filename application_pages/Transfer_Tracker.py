@@ -1,15 +1,10 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import os
 
-#st.set_page_config(page_title="Transfer Tracker", page_icon=":arrows_counterclockwise:", layout="wide")
+
 st.title("Transfer Tracker")
 st.markdown("Track and visualize your transfer transactions between accounts.")
-
-# List all CSV files in the data directory
-#data_dir = './data'
-#csv_files = [f for f in os.listdir(data_dir) if f.endswith('.csv')]
 
 # Multi-select for accounts to compare
 selected_files = st.multiselect("Select account CSV files to track transfers:", st.session_state.dataframes.keys(), default=list(st.session_state.dataframes.keys()))

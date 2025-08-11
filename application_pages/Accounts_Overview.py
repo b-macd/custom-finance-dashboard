@@ -4,13 +4,10 @@ import plotly.express as px
 
 df1 = st.selectbox("Select Fixed Account Data", options=list(st.session_state.dataframes.keys()), index=0)
 df = st.session_state.dataframes[df1]
-#df = df.drop(columns=['Original Description'])
+
 df2 = st.selectbox("Select Variable Account Data", options=list(st.session_state.dataframes.keys()), index=1)
 df_variable = st.session_state.dataframes[df2]
-#df = df.drop(columns=['Original Description'])
-#df_variable = pd.read_csv('./data/secondary-july-aug.csv')
-#df_variable = df_variable.drop(columns=['Original Description'])
-#st.set_page_config(page_title="Finance Dashboard", page_icon=":money_with_wings:", layout="wide")
+
 st.title("Accounts Overview")
 st.subheader("Overview of Financial Data")
 with st.expander("View Raw Data for Fixed Account"):
@@ -205,12 +202,9 @@ if radio_selection == "View totals by transaction type":
             # Display the combined amount for each selected description
             combined_amounts_total += combined_amounts
             st.info(f"Transaction type: {desc} \n\n Amount: ${(combined_amounts*-1):,.2f}")
-            #st.write(f"Amount: ${(combined_amounts*-1):,.2f}")
-            #st.write("---")
+
         st.warning(f"Total Combined Amount for Selected Transactions: \n\n ${(combined_amounts_total*-1):,.2f}")
-        #combined_amounts = df[df['Description'] == decriptions]['Amount'].sum() + df_variable[df_variable['Description'] == decriptions]['Amount'].sum()
-        #t.write(f"Description: {decriptions}")
-        #st.write(f"Amount: ${combined_amounts:,.2f}")
+
 elif radio_selection == "View totals by transaction type by keyword":
     with st.expander("View totals by transaction type by keyword"):
         st.write("This section allows you to view totals by transaction type for both fixed and variable accounts.")
