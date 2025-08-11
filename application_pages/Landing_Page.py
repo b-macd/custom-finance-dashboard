@@ -7,8 +7,8 @@ if "dataframes" not in st.session_state:
 
 st.title("Finance Dashboard")
 st.subheader(f"Welcome, {st.session_state.username}!")
-st.write("Use the navigation menu in the sidebar to explore different sections of the dashboard.")
-st.write("Explore the features of this dashboard:")
+st.write("Use the navigation menu in the sidebar (on mobile, click the '>>' in the top left corner to access this.) to explore different sections of the dashboard.")
+st.write("Dashboard Features:")
 st.markdown("""
 - **Accounts Overview**: Get a summary of your financial accounts.
 - **Budget Builder**: Create and manage your budget effectively.
