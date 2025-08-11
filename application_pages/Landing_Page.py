@@ -16,7 +16,7 @@ st.markdown("""
 """)
 
 # upload file feature to store csv data in dataframs for other pages
-st.subheader("Upload Your Financial Data in CSV format")
+st.info("Upload Your Financial Data in CSV format")
 uploaded_files = st.file_uploader("Upload a CSV file containing your financial data", type=["csv"], accept_multiple_files=True,)
 
 if uploaded_files:

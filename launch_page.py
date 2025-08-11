@@ -45,19 +45,19 @@ app_1 = st.Page(
     icon=":material/account_balance:",
 )
 app_2 = st.Page(
-    "application_pages/Budget_Builder.py",
-    title="Budget Builder",
-    icon=":material/price_check:",
-)
-app_3 = st.Page(
     "application_pages/Monthly_Expense_Report.py",
     title="Monthly Expense Report",
     icon=":material/analytics:",
 )
-app_4 = st.Page(
+app_3 = st.Page(
     "application_pages/Transfer_Tracker.py",
     title="Transfer Tracker",
     icon=":material/query_stats:",
+)
+app_4 = st.Page(
+    "application_pages/Budget_Builder.py",
+    title="Budget Builder",
+    icon=":material/price_check:",
 )
 
 home_page = [landing_page]
