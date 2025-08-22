@@ -189,9 +189,9 @@ else:
 
     fig_expanded = go.Figure(data=[go.Sankey(
         node=dict(
-            pad=80,
-            thickness=30,
-            line=dict(color="black", width=0.5),
+            pad=15,
+            thickness=20,
+            line=dict(color="black", width=.15),
             label=all_labels_expanded,
         ),
         link=dict(
@@ -202,7 +202,7 @@ else:
         )
     )])
 
-    fig_expanded.update_layout(title_text="All Transfers Including Key Merchant Expenditures", font_size=12, height=720)  # Increase height as needed
+    fig_expanded.update_layout(title_text="All Transfers Including Key Merchant Expenditures", font_size=12)  # Increase height as needed
 
     # Sankey diagram code remains the same
     st.plotly_chart(fig_expanded, use_container_width=True)
